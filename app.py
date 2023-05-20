@@ -18,7 +18,8 @@ def connect_db():
                           'Database=st_test_app;'
                           'Trusted_Connection=yes;'
                           'UID={teste};'
-                          'PWD=123456'
+                          'PWD=123456;'
+                          'Encrypt=no'
                          )
     cursor = cnxn.cursor()
     return cursor
@@ -58,12 +59,4 @@ if button:
     
     st.write("Sign up succesful")
     
-if __name__ == '__main__':
-    # Inicia o aplicativo Streamlit na porta 8080
-    app_port = 8080
-    app_host = '0.0.0.0'
-    app_url = f'http://{app_host}:{app_port}'
-    st.set_option('server.port', app_port)
-    st.set_option('server.headless', True)
-    st.set_page_config(layout='wide')
-    st.server.run(app_host=app_host, app_port=app_port)
+
