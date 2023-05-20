@@ -19,7 +19,8 @@ def connect_db():
                           'Trusted_Connection=yes;'
                           'UID={teste};'
                           'PWD=123456;'
-                          'Encrypt=no'
+                          'Encrypt=no;'
+                          'port = 1433'
                          )
     cursor = cnxn.cursor()
     return cursor
