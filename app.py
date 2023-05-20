@@ -13,7 +13,7 @@ def connect_db():
     database = 'st_test_app' 
     username = 'teste' 
     password = '123456' 
-    cnxn = pyodbc.connect('Driver={SQL Server};'
+    cnxn = pyodbc.connect('Driver={ODBC Driver 18 for SQL Server};'
                           'Server=DESKTOP-J6PBL6B;'
                           'Database=st_test_app;'
                           'Trusted_Connection=yes;'
